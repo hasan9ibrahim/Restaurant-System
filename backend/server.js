@@ -320,7 +320,7 @@ async function seedDatabase() {
       { key: 'about.years', en: 'Years Experience', ar: 'سنوات الخبرة' },
       { key: 'about.items', en: 'Menu Items', ar: 'عنصر القائمة' },
       { key: 'about.customers', en: 'Happy Customers', ar: 'عميل سعيد' },
-      { key: 'about.text1', en: 'Founded in 1985, Abu Abdou Restaurant has been serving authentic Middle Eastern cuisine to our beloved community for over three decades.', ar: 'منذ عام 1985، كان مطعم أبو عبدو يقدم المطبخ الشرقي الأصيل لمجتمعتنا العزيزة لأكثر من ثلاثة عقود.' },
+      { key: 'about.text1', en: 'Founded in 1985, <Insert Name> Restaurant has been serving authentic Middle Eastern cuisine to our beloved community for over three decades.', ar: 'منذ عام 1985، كان مطعم أبو عبدو يقدم المطبخ الشرقي الأصيل لمجتمعتنا العزيزة لأكثر من ثلاثة عقود.' },
       { key: 'about.text2', en: 'Every dish we serve is prepared with love and dedication.', ar: 'كل طبق نقدمه محضر بحب وإخلاص.' },
       { key: 'about.feature1', en: 'Fresh, locally-sourced ingredients', ar: 'مكونات طازجة محلية' },
       { key: 'about.feature2', en: 'Authentic family recipes', ar: 'وصفات عائلية أصلية' },

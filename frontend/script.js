@@ -1,5 +1,5 @@
 /* ============================================
-   Abu Abdou Restaurant - Interactive Script
+   <Insert Name> Restaurant - Interactive Script
    ============================================ */
 
 // State
@@ -32,7 +32,7 @@ const fallbackTranslations = {
     "menu.beverages": { en: "Beverages", ar: "المشروبات" },
     "about.tag": { en: "Our Story", ar: "قصتنا" },
     "about.title": { en: "Tradition Meets<br>Excellence", ar: "التقالة<br>تواجه التميز" },
-    "about.text1": { en: "Founded in 1985, Abu Abdou Restaurant has been serving authentic Middle Eastern cuisine to our beloved community for over three decades.", ar: "منذ عام 1985، كان مطعم أبو عبدو يقدم المطبخ الشرقي الأصيل لمجتمعتنا العزيزة لأكثر من ثلاثة عقود." },
+    "about.text1": { en: "Founded in 1985, <Insert Name> Restaurant has been serving authentic Middle Eastern cuisine to our beloved community for over three decades.", ar: "منذ عام 1985، كان مطعم أبو عبدو يقدم المطبخ الشرقي الأصيل لمجتمعتنا العزيزة لأكثر من ثلاثة عقود." },
     "about.text2": { en: "Every dish we serve is prepared with love and dedication.", ar: "كل طبق نقدمه محضر بحب وإخلاص." },
     "about.feature1": { en: "Fresh, locally-sourced ingredients", ar: "مكونات طازجة محلية" },
     "about.feature2": { en: "Authentic family recipes", ar: "وصفات عائلية أصلية" },
