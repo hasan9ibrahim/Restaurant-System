@@ -7,7 +7,26 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors());
+const allowedOrigins = [
+  'http://localhost:8080',        // local frontend
+  'http://127.0.0.1:8080',
+  'https://restaurant-system-frontend-xqql.onrender.com' // your Render frontend
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // allow requests with no origin (like Postman)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
+
 app.use(express.json());
 
 // MongoDB Connection
@@ -270,10 +289,10 @@ async function seedDatabase() {
   }
 
   // Seed translations
-  const transCount = await Translation.countDocuments();
-  if (transCount === 0) {
-    console.log('🌱 Seeding translations...');
-    
+  // Always delete and re-seed to ensure latest translations are loaded
+  await Translation.deleteMany({});
+  console.log('🌱 Seeding translations...');
+  
     const translations = [
       { key: 'nav.home', en: 'Home', ar: 'الرئيسية' },
       { key: 'nav.menu', en: 'Menu', ar: 'القائمة' },
@@ -323,7 +342,6 @@ async function seedDatabase() {
 
     await Translation.insertMany(translations);
     console.log('✅ Translations seeded successfully');
-  }
 }
 
 // API Routes
